@@ -2,7 +2,8 @@ let numeroSecreto = Math.floor(Math.random() * 50) + 1;
 
 let palpite = 15;
 
-while (palpite !== numeroSecreto) {
+while (palpite !== numeroSecreto) {   
+    
     palpite = Number(prompt("Adivinhe o número (entre 1 e 50):"));
 
     if (palpite < numeroSecreto) {
