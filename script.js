@@ -11,7 +11,7 @@ if (jogador !== "pedra" && jogador !== "papel" && jogador !== "tesoura") {
     
     let numero = Math.floor(Math.random() * 3);
 
-    // Mapeia o número para a escolha do computador
+    
     let computador;
 
     if (numero === 0) {
