@@ -1,37 +1,15 @@
+let numeroSecreto = Math.floor(Math.random() * 50) + 1;
 
-let jogador = prompt("Escolha: pedra, papel ou tesoura");
+let palpite = 0;
 
-jogador = jogador.toLowerCase();
+while (palpite !== numeroSecreto) {
+    palpite = Number(prompt("Digite um número entre 1 e 50:"));
 
-
-if (jogador !== "pedra" && jogador !== "papel" && jogador !== "tesoura") {
-    alert("Opção inválida! Recarregue a página e tente novamente");
-} else {
-
-    
-    let numero = Math.floor(Math.random() * 3);
-
-    
-    let computador;
-
-    if (numero === 0) {
-        computador = "pedra";
-    } else if (numero === 1) {
-        computador = "papel";
+    if (palpite < numeroSecreto) {
+        alert("O número secreto é maior!");
+    } else if (palpite > numeroSecreto) {
+        alert("O número secreto é menor!");
     } else {
-        computador = "tesoura";
-    }
-
-    
-    if (jogador === computador) {
-        alert("Computador: " + computador + "\nEmpate");
-    } else if (
-        (jogador === "pedra" && computador === "tesoura") ||
-        (jogador === "papel" && computador === "pedra") ||
-        (jogador === "tesoura" && computador === "papel")
-    ) {
-        alert("Computador: " + computador + "\nVocê venceu!");
-    } else {
-        alert("Computador: " + computador + "\nVocê perdeu!");
+        alert("Parabéns! Você acertou o número secreto: " + numeroSecreto);
     }
 }
